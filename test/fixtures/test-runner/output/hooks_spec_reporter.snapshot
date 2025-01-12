@@ -6,9 +6,8 @@
      nested 1 (*ms)
      nested 2 (*ms)
    nested (*ms)
-
  describe hooks (*ms)
-
+ describe hooks - no subtests (*ms)
  before throws
    1
     'test did not finish before its parent and was cancelled'
@@ -20,6 +19,16 @@
 
   Error: before
       *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+
+ before throws - no subtests (*ms)
+  Error: before
       *
       *
       *
@@ -44,6 +53,20 @@
       *
       *
       *
+      *
+
+ after throws - no subtests (*ms)
+  Error: after
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
 
  beforeEach throws
    1 (*ms)
@@ -55,9 +78,9 @@
         *
         *
         *
-        at async Promise.all (index 0)
         *
         *
+        at new Promise (<anonymous>)
 
    2 (*ms)
     Error: beforeEach
@@ -69,9 +92,10 @@
         *
         *
         *
+        *
+        at async Promise.all (index 0)
 
  beforeEach throws (*ms)
-
  afterEach throws
    1 (*ms)
     Error: afterEach
@@ -99,7 +123,6 @@
         *
 
  afterEach throws (*ms)
-
  afterEach when test fails
    1 (*ms)
     Error: test
@@ -116,7 +139,6 @@
 
    2 (*ms)
  afterEach when test fails (*ms)
-
  afterEach throws and test fails
    1 (*ms)
     Error: test
@@ -144,7 +166,6 @@
         *
 
  afterEach throws and test fails (*ms)
-
  test hooks
    1 (*ms)
    2 (*ms)
@@ -152,9 +173,8 @@
      nested 1 (*ms)
      nested 2 (*ms)
    nested (*ms)
-
  test hooks (*ms)
-
+ test hooks - no subtests (*ms)
  t.before throws
    1 (*ms)
     Error: before
@@ -184,6 +204,59 @@
 
  t.before throws (*ms)
 
+  Error: before
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+
+ t.before throws - no subtests (*ms)
+  Error: before
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+
+ t.after throws
+   1 (*ms)
+   2 (*ms)
+ t.after throws (*ms)
+
+  Error: after
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+
+ t.after throws - no subtests (*ms)
+  Error: after
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+
  t.beforeEach throws
    1 (*ms)
     Error: beforeEach
@@ -212,7 +285,6 @@
         *
 
  t.beforeEach throws (*ms)
-
  t.afterEach throws
    1 (*ms)
     Error: afterEach
@@ -241,7 +313,6 @@
         *
 
  t.afterEach throws (*ms)
-
  afterEach when test fails
    1 (*ms)
     Error: test
@@ -257,11 +328,9 @@
 
    2 (*ms)
  afterEach when test fails (*ms)
-
  afterEach context when test passes
    1 (*ms)
  afterEach context when test passes (*ms)
-
  afterEach context when test fails
    1 (*ms)
     Error: test
@@ -271,7 +340,6 @@
         *
 
  afterEach context when test fails (*ms)
-
  afterEach throws and test fails
    1 (*ms)
     Error: test
@@ -299,7 +367,6 @@
         *
 
  afterEach throws and test fails (*ms)
-
  t.after() is called if test body throws (*ms)
   Error: bye
       *
@@ -323,16 +390,19 @@
       *
       *
       *
-      *
 
+ test hooks - async
+   1 (*ms)
+   2 (*ms)
+ test hooks - async (*ms)
  before 1 called
  before 2 called
  after 1 called
  after 2 called
- tests 43
- suites 9
- pass 16
- fail 24
+ tests 52
+ suites 12
+ pass 22
+ fail 27
  cancelled 3
  skipped 0
  todo 0
@@ -359,6 +429,17 @@
       *
       *
       *
+
+*
+ before throws - no subtests (*ms)
+  Error: before
+      *
+      *
+      *
+      *
+      *
+      *
+      *
       *
 
 *
@@ -373,6 +454,21 @@
       *
       *
       *
+      *
+
+*
+ after throws - no subtests (*ms)
+  Error: after
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
 
 *
  1 (*ms)
@@ -384,9 +480,9 @@
       *
       *
       *
-      at async Promise.all (index 0)
       *
       *
+      at new Promise (<anonymous>)
 
 *
  2 (*ms)
@@ -399,6 +495,8 @@
       *
       *
       *
+      *
+      at async Promise.all (index 0)
 
 *
  1 (*ms)
@@ -486,6 +584,60 @@
  2 (*ms)
   Error: before
       *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+
+*
+ t.before throws (*ms)
+  Error: before
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+
+*
+ t.before throws - no subtests (*ms)
+  Error: before
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+
+*
+ t.after throws (*ms)
+  Error: after
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+      *
+
+*
+ t.after throws - no subtests (*ms)
+  Error: after
       *
       *
       *
@@ -615,7 +767,6 @@
 *
  run after when before throws (*ms)
   Error: before
-      *
       *
       *
       *
